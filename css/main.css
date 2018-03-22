@@ -4,11 +4,25 @@ html, body {
   font-family: 'PF Centro Sans Pro';
   color: #000; }
 
+body {
+  background-color: #f4f4f4; }
+
 a {
   color: #000; }
 
+/**MAIN*/
+main {
+  padding: 30px 0; }
+  main .container {
+    border-top: 10px solid #b2d8fd;
+    -webkit-box-shadow: 0 6px 10px #ccc;
+    -moz-box-shadow: 0 6px 10px #ccc;
+    box-shadow: 0 6px 10px #ccc; }
+
+/**PERFORMER*/
 /**FOOTER*/
 footer {
+  background-color: #fff;
   padding: 60px 0;
   border-bottom: 4px solid #f97819; }
   footer .copyright {
