@@ -143,15 +143,79 @@
                 </div>
                 <!-- /.col-xl-3 col-lg-6 col-md-12 -->
                 <div class="col-xl-3 col-lg-6 col-md-12">
-
+                    <div class="user-proofs">
+                        <span><img src="img/user-exam.png" alt="">Экзамен сдан</span>
+                        <span><img src="img/user-proof.png" alt="">Данные проверены</span>
+                        <span><img src="img/user-agreement.png" alt="">Работает по договору</span>
+                        <span><img src="img/user-warranty.png" alt="">Дает гарантию</span>
+                        <span><img src="img/user-certificate.png" alt="">Сертификация пройдена</span>
+                    </div>
+                    <!-- /.user-proofs -->
                 </div>
                 <!-- /.col-xl-3 col-lg-6 col-md-12 -->
                 <div class="col-xl-3 col-lg-6 col-md-12">
-
+                    <div class="user-main-prices">
+                        <p><span class="mp-img"><img src="img/user-departure.png" alt=""></span>Выезд на объект: <span class="mp-price"><b>400</b> руб.</span></p>
+                        <p><span class="mp-img"><img src="img/user-departure-fast.png" alt=""></span>Срочный выезд на объект: <span class="mp-price"><b>700</b> руб.</span></p>
+                        <p><span class="mp-img"><img src="img/user-min-offer.png" alt=""></span>Минимальный заказ: <span class="mp-price"><b>400</b> руб.</span></p>
+                    </div>
+                    <!-- /.user-main-prices -->
                 </div>
                 <!-- /.col-xl-3 col-lg-6 col-md-12 -->
             </div>
             <!-- /.row -->
+            <div class="row performer-map">
+                <div class="col-12">
+                    <h3>Местоположение исполнителя</h3>
+                    <address>г. Москва, ул. Котляковская, д. 3, стр. 13</address>
+                    <div id="map" style="width: 100%; height: 180px"></div>
+                </div>
+                <!-- /.col-12 -->
+            </div>
+            <!-- /.row performer-map -->
+            <div class="row performer-services">
+                <div class="col-12">
+                    <h3>Услуги и цены:</h3>
+                    <table class="services-table">
+                        <thead>
+                            <th>Наименование работ:</th>
+                            <th>Единица измерений:</th>
+                            <th>Средняя цена в г. Москва</th>
+                            <th>Цена исполнителя:</th>
+                        </thead>
+                        <tr class="table-subheading">
+                            <th>Сантехника</th>
+                        </tr>
+                        <tr class="table-content">
+                            <th><a href="#">Установка смесителей</a></th>
+                            <th>25 шт.</th>
+                            <th>500 руб.</th>
+                            <th>500 руб.</th>
+                        </tr>
+                        <tr class="table-content">
+                            <th><a href="#">Установка смесителей</a></th>
+                            <th>25 шт.</th>
+                            <th>500 руб.</th>
+                            <th>500 руб.</th>
+                        </tr>
+                        <tr class="table-content">
+                            <th><a href="#">Установка смесителей</a></th>
+                            <th>25 шт.</th>
+                            <th>500 руб.</th>
+                            <th>500 руб.</th>
+                        </tr>
+                        <tr class="table-content">
+                            <th><a href="#">Установка смесителей</a></th>
+                            <th>25 шт.</th>
+                            <th>500 руб.</th>
+                            <th>500 руб.</th>
+                        </tr>
+                    </table>
+                    <!-- /.services-table -->
+                </div>
+                <!-- /.col-12 -->
+            </div>
+            <!-- /.row services -->
         </div>
         <!-- /.container -->
     </main>
@@ -229,6 +293,19 @@
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.selectric.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="js/main.js"></script>
+<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){
+        myMap = new ymaps.Map("map", {
+            center: [55.644137, 37.629164],
+            zoom: 14,
+            controls: []
+        });
+    }
+</script>
 </body>
 </html>
