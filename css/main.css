@@ -1,6 +1,90 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'PF Centro Sans Pro'; }
+  font-family: 'PF Centro Sans Pro';
+  color: #000; }
+
+a {
+  color: #000; }
+
+/**FOOTER*/
+footer {
+  padding: 60px 0;
+  border-bottom: 4px solid #f97819; }
+  footer .copyright {
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-top: 20px; }
+  footer .footer-nav {
+    margin: 0;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 10em;
+    padding-left: 0; }
+    footer .footer-nav li {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 12px; }
+      footer .footer-nav li a {
+        font-size: 13px; }
+  footer .footer-social {
+    margin-top: 25px; }
+    footer .footer-social a {
+      margin-right: 50px; }
+      footer .footer-social a:last-child {
+        margin-right: 0; }
+  footer .agreement {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between; }
+    footer .agreement .agreement-notice {
+      font-weight: 600; }
+  footer .footer-phone {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 900; }
+  footer .work-hours {
+    font-size: 12px;
+    text-align: right; }
+    footer .work-hours p {
+      margin-top: 12px; }
+
+/**MEDIA*/
+@media (max-width: 1200px) {
+  footer .agreement {
+    padding: 25px 0; }
+  footer .footer-phone {
+    text-align: center; }
+  footer .work-hours {
+    text-align: center; } }
+@media (max-width: 992px) {
+  footer .footer-logo {
+    display: block;
+    text-align: center; }
+  footer .copyright {
+    text-align: center; }
+  footer .footer-nav {
+    max-height: unset;
+    list-style: none; }
+    footer .footer-nav li {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+      text-align: center; }
+  footer .footer-social {
+    text-align: center; }
+    footer .footer-social a {
+      padding: 20px;
+      margin: 0; }
+  footer .agreement {
+    padding: 25px 0; }
+  footer .footer-phone {
+    text-align: center; }
+  footer .work-hours {
+    text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
