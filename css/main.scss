@@ -15,19 +15,91 @@ body {
 a {
   color: $primary_color;
 }
+.bread {
+  ul {
+    padding: 0;
+  }
+}
 /**MAIN*/
 main {
   padding: 30px 0;
+  .main-border {
+    height: 10px;
+    background-color: $blue_color;
+    margin: 0 -15px;
+  }
   .container {
-    border-top: 10px solid $blue_color;
-    -webkit-box-shadow: 0 6px 10px #ccc;
-    -moz-box-shadow: 0 6px 10px #ccc;
-    box-shadow: 0 6px 10px #ccc;
+    -webkit-box-shadow: 0 0 16px #ccc;
+    -moz-box-shadow: 0 0 16px #ccc;
+    box-shadow: 0 0 16px #ccc;
   }
 }
 /**PERFORMER*/
 .performer {
-
+  .performer-top-info {
+    padding: 30px 0;
+    .user-avatar {
+      padding: 10px;
+      -webkit-box-shadow: 0 0 10px #ccc;
+      -moz-box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px #ccc;
+      img {
+        width: 100%;
+      }
+    }
+    .user-essential {
+      display: flex;
+      .user-ico {
+        padding: 0 12px;
+        img {
+          margin-top: 8px;
+        }
+      }
+      .user-name {
+        font-size: 27px;
+        padding: 0;
+        margin: 0;
+      }
+      .user-profession {
+        margin: 12px 0 18px;
+        a {
+          font-size: 18px;
+        }
+      }
+      .last-visit {
+        font-size: 12px;
+      }
+      .user-line {
+        width: 226px;
+        height: 1px;
+        background-color: #e6e6e6;
+      }
+      .user-experience {
+        font-size: 12px;
+      }
+      .user-rating {
+        margin-top: 18px;
+        span.rating {
+          display: inline-block;
+          padding: 4px 15px;
+          border: 1px solid #21cc3d;
+          color: #21cc3d;
+          font-weight: 700;
+          margin-right: 10px;
+        }
+        .user-reviews-amount {
+          font-size: 24px;
+          line-height: 24px;
+          vertical-align: text-top;
+          font-weight: 900;
+        }
+        .user-reviews-link {
+          font-size: 12px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
 }
 /**FOOTER*/
 footer {
