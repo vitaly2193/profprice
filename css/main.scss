@@ -12,12 +12,35 @@ html, body {
 body {
   background-color: $bg_color;
 }
+.w-100 {
+  width: 100%!important;
+}
 a {
   color: $primary_color;
+}
+img {
+  max-width: 100%;
 }
 .bread {
   ul {
     padding: 0;
+  }
+}
+.btn-white {
+  display: inline-block;
+  padding: 10px 70px;
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 4px;
+  border: 1px solid #bab9b9;
+  text-decoration: none;
+  -webkit-transition: ease 250ms;
+  -moz-transition: ease 250ms;
+  -ms-transition: ease 250ms;
+  -o-transition: ease 250ms;
+  transition: ease 250ms;
+  &:hover {
+    border-color: $primary_color;
   }
 }
 /**MAIN*/
@@ -184,18 +207,26 @@ main {
   }
   .performer-services {
     padding: 30px 0;
+    .table-wrapper {
+      max-width: 100%;
+    }
     table.services-table {
       margin-top: 30px;
       width: 100%;
+      border-spacing: 0;
       thead {
         font-size: 16px;
         font-weight: 500;
         th {
           padding-top: 30px;
           padding-bottom: 30px;
+          border-right: 1px solid $white_color;
           &:first-child {
             text-align: left;
             padding-left: 30px;
+          }
+          &:last-child {
+            border-right: none;
           }
           background-color: $blue_color;
         }
@@ -216,13 +247,151 @@ main {
           background-color: #f7fafc;
         }
         th {
+          font-weight: 400;
           font-size: 13px;
           padding: 20px 0;
+          border-top: 1px solid #e0ecf8;
           &:first-child {
             text-align: left;
             padding-left: 30px;
+            border-left: 1px solid #e0ecf8;
+            font-size: 13px;
+          }
+          &:nth-child(2) {
+            font-size: 15px;
+          }
+          &:nth-child(3) {
+            font-size: 15px;
+            b {
+              font-weight: 900;
+              font-size: 18px;
+            }
+          }
+          &:last-child {
+            border-right: 1px solid #e0ecf8;
+            font-size: 15px;
+            b {
+              font-weight: 900;
+              font-size: 18px;
+            }
           }
         }
+        &:last-child {
+          th {
+            border-bottom: 1px solid #e0ecf8;
+          }
+        }
+      }
+    }
+  }
+  .works-gallery {
+    padding: 30px 0;
+    h3 {
+      margin-bottom: 30px;
+    }
+    &_item {
+      position: relative;
+      img {
+        border-radius: 6px;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 300;
+        font-style: italic;
+      }
+      .icon-zoom {
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        background: url(../img/icon_zoom.png) center no-repeat;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .user-testemonials {
+    padding: 30px 0;
+    h3 {
+      small {
+        font-weight: 700;
+        font-size: 12px;
+        color: #7d7d7d;
+        vertical-align: text-top;
+      }
+    }
+    &_item {
+      display: flex;
+      padding: 30px 100px 0 15px;
+      margin-bottom: 60px;
+      position: relative;
+      .testemonial-border {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #e0ecf8;
+      }
+      &:nth-child(odd) {
+        border-right: 1px dotted #e0ecf8;
+      }
+      &:nth-child(even) {
+        .user-testemonials_item_rating {
+          padding-left: 15px;
+        }
+      }
+      &_rating {
+        font-weight: 900;
+        font-size: 30px;
+        color: #eb1e1e;
+        line-height: 16px;
+        padding-right: 20px;
+        span {
+          font-size: 26px;
+          vertical-align: super;
+        }
+      }
+      &_info {
+        .user-testemonial-work {
+          font-weight: 900;
+          font-size: 15px;
+        }
+        p {
+          font-size: 15px;
+        }
+        .testemonial-author {
+          display: flex;
+          justify-content: space-between;
+          .testemonial-author-name {
+            font-size: 13px;
+            color: #035d90;
+            padding-left: 20px;
+            padding-top: 2px;
+            background: url(../img/user-ico.png) left center no-repeat;
+            background-size: 14px;
+          }
+          .testemonial-author-date {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .show_more {
+      padding: 30px 0 15px;
+      text-align: center;
+      position: relative;
+      .show_more_border {
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        top: -31px;
+        background-color: $white_color;
       }
     }
   }
@@ -304,6 +473,28 @@ footer {
 
 /**MEDIA*/
 @media (max-width:1200px) {
+  .performer {
+    .performer-top-info {
+      .user-proofs {
+        border: none;
+        margin-top: 25px;
+      }
+      .user-main-prices {
+        margin-top: 25px;
+      }
+    }
+    .user-testemonials {
+      &_item {
+        padding-right: 15px;
+        &:nth-child(odd) {
+          border: none;
+        }
+        &:nth-child(even) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
   footer {
     .agreement {
       padding: 25px 0;
@@ -317,6 +508,21 @@ footer {
   }
 }
 @media (max-width:992px) {
+  .performer {
+    .performer-top-info {
+      .user-essential {
+        .user-name {
+          margin-top: 25px;
+        }
+        .user-ico {
+          margin-top: 25px;
+        }
+      }
+      .user-main-prices {
+        padding-left: 30px;
+      }
+    }
+  }
   footer {
     .footer-logo {
       display: block;
@@ -352,4 +558,25 @@ footer {
       text-align: center;
     }
   }
+}
+@media (max-width:640px) {
+  .performer {
+    .performer-services {
+      .table-wrapper {
+        overflow-x: scroll;
+      }
+    }
+    .user-testemonials {
+      &_item {
+        .user-testemonials_item_rating {
+          font-size: 26px;
+          padding-right: 15px;
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
 }

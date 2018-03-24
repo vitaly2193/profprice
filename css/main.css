@@ -7,11 +7,33 @@ html, body {
 body {
   background-color: #f4f4f4; }
 
+.w-100 {
+  width: 100% !important; }
+
 a {
   color: #000; }
 
+img {
+  max-width: 100%; }
+
 .bread ul {
   padding: 0; }
+
+.btn-white {
+  display: inline-block;
+  padding: 10px 70px;
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 4px;
+  border: 1px solid #bab9b9;
+  text-decoration: none;
+  -webkit-transition: ease 250ms;
+  -moz-transition: ease 250ms;
+  -ms-transition: ease 250ms;
+  -o-transition: ease 250ms;
+  transition: ease 250ms; }
+  .btn-white:hover {
+    border-color: #000; }
 
 /**MAIN*/
 main {
@@ -141,19 +163,25 @@ main {
     background-repeat: no-repeat; }
 .performer .performer-services {
   padding: 30px 0; }
+  .performer .performer-services .table-wrapper {
+    max-width: 100%; }
   .performer .performer-services table.services-table {
     margin-top: 30px;
-    width: 100%; }
+    width: 100%;
+    border-spacing: 0; }
     .performer .performer-services table.services-table thead {
       font-size: 16px;
       font-weight: 500; }
       .performer .performer-services table.services-table thead th {
         padding-top: 30px;
         padding-bottom: 30px;
+        border-right: 1px solid #fff;
         background-color: #b2d8fd; }
         .performer .performer-services table.services-table thead th:first-child {
           text-align: left;
           padding-left: 30px; }
+        .performer .performer-services table.services-table thead th:last-child {
+          border-right: none; }
     .performer .performer-services table.services-table tr.table-subheading th {
       font-weight: 900;
       font-size: 15px;
@@ -165,11 +193,113 @@ main {
     .performer .performer-services table.services-table tr.table-content:nth-of-type(even) {
       background-color: #f7fafc; }
     .performer .performer-services table.services-table tr.table-content th {
+      font-weight: 400;
       font-size: 13px;
-      padding: 20px 0; }
+      padding: 20px 0;
+      border-top: 1px solid #e0ecf8; }
       .performer .performer-services table.services-table tr.table-content th:first-child {
         text-align: left;
-        padding-left: 30px; }
+        padding-left: 30px;
+        border-left: 1px solid #e0ecf8;
+        font-size: 13px; }
+      .performer .performer-services table.services-table tr.table-content th:nth-child(2) {
+        font-size: 15px; }
+      .performer .performer-services table.services-table tr.table-content th:nth-child(3) {
+        font-size: 15px; }
+        .performer .performer-services table.services-table tr.table-content th:nth-child(3) b {
+          font-weight: 900;
+          font-size: 18px; }
+      .performer .performer-services table.services-table tr.table-content th:last-child {
+        border-right: 1px solid #e0ecf8;
+        font-size: 15px; }
+        .performer .performer-services table.services-table tr.table-content th:last-child b {
+          font-weight: 900;
+          font-size: 18px; }
+    .performer .performer-services table.services-table tr.table-content:last-child th {
+      border-bottom: 1px solid #e0ecf8; }
+.performer .works-gallery {
+  padding: 30px 0; }
+  .performer .works-gallery h3 {
+    margin-bottom: 30px; }
+  .performer .works-gallery_item {
+    position: relative; }
+    .performer .works-gallery_item img {
+      border-radius: 6px; }
+    .performer .works-gallery_item p {
+      font-size: 13px;
+      font-weight: 300;
+      font-style: italic; }
+    .performer .works-gallery_item .icon-zoom {
+      position: absolute;
+      top: 10px;
+      left: 25px;
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      background: url(../img/icon_zoom.png) center no-repeat; }
+      .performer .works-gallery_item .icon-zoom:focus {
+        outline: none; }
+.performer .user-testemonials {
+  padding: 30px 0; }
+  .performer .user-testemonials h3 small {
+    font-weight: 700;
+    font-size: 12px;
+    color: #7d7d7d;
+    vertical-align: text-top; }
+  .performer .user-testemonials_item {
+    display: flex;
+    padding: 30px 100px 0 15px;
+    margin-bottom: 60px;
+    position: relative; }
+    .performer .user-testemonials_item .testemonial-border {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #e0ecf8; }
+    .performer .user-testemonials_item:nth-child(odd) {
+      border-right: 1px dotted #e0ecf8; }
+    .performer .user-testemonials_item:nth-child(even) .user-testemonials_item_rating {
+      padding-left: 15px; }
+    .performer .user-testemonials_item_rating {
+      font-weight: 900;
+      font-size: 30px;
+      color: #eb1e1e;
+      line-height: 16px;
+      padding-right: 20px; }
+      .performer .user-testemonials_item_rating span {
+        font-size: 26px;
+        vertical-align: super; }
+    .performer .user-testemonials_item_info .user-testemonial-work {
+      font-weight: 900;
+      font-size: 15px; }
+    .performer .user-testemonials_item_info p {
+      font-size: 15px; }
+    .performer .user-testemonials_item_info .testemonial-author {
+      display: flex;
+      justify-content: space-between; }
+      .performer .user-testemonials_item_info .testemonial-author .testemonial-author-name {
+        font-size: 13px;
+        color: #035d90;
+        padding-left: 20px;
+        padding-top: 2px;
+        background: url(../img/user-ico.png) left center no-repeat;
+        background-size: 14px; }
+      .performer .user-testemonials_item_info .testemonial-author .testemonial-author-date {
+        font-size: 12px; }
+  .performer .user-testemonials .show_more {
+    padding: 30px 0 15px;
+    text-align: center;
+    position: relative; }
+    .performer .user-testemonials .show_more .show_more_border {
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      z-index: 3;
+      top: -31px;
+      background-color: #fff; }
 
 /**FOOTER*/
 footer {
@@ -231,6 +361,18 @@ footer {
 
 /**MEDIA*/
 @media (max-width: 1200px) {
+  .performer .performer-top-info .user-proofs {
+    border: none;
+    margin-top: 25px; }
+  .performer .performer-top-info .user-main-prices {
+    margin-top: 25px; }
+  .performer .user-testemonials_item {
+    padding-right: 15px; }
+    .performer .user-testemonials_item:nth-child(odd) {
+      border: none; }
+    .performer .user-testemonials_item:nth-child(even) {
+      padding-left: 0; }
+
   footer .agreement {
     padding: 25px 0; }
   footer .footer-phone {
@@ -238,6 +380,13 @@ footer {
   footer .work-hours {
     text-align: center; } }
 @media (max-width: 992px) {
+  .performer .performer-top-info .user-essential .user-name {
+    margin-top: 25px; }
+  .performer .performer-top-info .user-essential .user-ico {
+    margin-top: 25px; }
+  .performer .performer-top-info .user-main-prices {
+    padding-left: 30px; }
+
   footer .footer-logo {
     display: block;
     text-align: center; }
@@ -262,5 +411,13 @@ footer {
     text-align: center; }
   footer .work-hours {
     text-align: center; } }
+@media (max-width: 640px) {
+  .performer .performer-services .table-wrapper {
+    overflow-x: scroll; }
+  .performer .user-testemonials_item .user-testemonials_item_rating {
+    font-size: 26px;
+    padding-right: 15px; }
+    .performer .user-testemonials_item .user-testemonials_item_rating span {
+      font-size: 18px; } }
 
 /*# sourceMappingURL=main.css.map */
