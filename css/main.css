@@ -2,7 +2,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'PF Centro Sans Pro';
-  color: #000; }
+  color: #000;
+  overflow-x: hidden; }
 
 body {
   background-color: #f4f4f4; }
@@ -13,8 +14,14 @@ body {
 a {
   color: #000; }
 
+a:focus {
+  outline: none; }
+
 img {
   max-width: 100%; }
+
+.fancybox-close-small {
+  display: none; }
 
 .bread ul {
   padding: 0; }
@@ -31,9 +38,33 @@ img {
   -moz-transition: ease 250ms;
   -ms-transition: ease 250ms;
   -o-transition: ease 250ms;
-  transition: ease 250ms; }
+  transition: ease 250ms;
+  background-color: #fff; }
   .btn-white:hover {
     border-color: #000; }
+
+.btn-orange {
+  display: inline-block;
+  padding: 15px 50px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: ease 250ms;
+  -moz-transition: ease 250ms;
+  -ms-transition: ease 250ms;
+  -o-transition: ease 250ms;
+  transition: ease 250ms;
+  background-color: #f97819;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 3px 0 0 #be5304;
+  box-shadow: 3px 3px 0 0 #be5304; }
+  .btn-orange:hover {
+    -webkit-box-shadow: 4px 4px 0 0 #be5304;
+    box-shadow: 4px 4px 0 0 #be5304; }
 
 /**MAIN*/
 main {
@@ -78,7 +109,17 @@ main {
     .performer .performer-top-info .user-essential .user-profession {
       margin: 12px 0 18px; }
       .performer .performer-top-info .user-essential .user-profession a {
-        font-size: 18px; }
+        font-size: 18px;
+        text-decoration: none;
+        background: -moz-linear-gradient(left, #000, #000 100%);
+        background: -ms-linear-gradient(left, #000, #000 100%);
+        background: -o-linear-gradient(left, #000, #000 100%);
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
+        background: -webkit-linear-gradient(left, #000, #000 100%);
+        background: linear-gradient(left, #000, #000 100%);
+        background-position: 0 100%;
+        background-size: 10px 1px;
+        background-repeat: repeat-x; }
     .performer .performer-top-info .user-essential .last-visit {
       font-size: 12px; }
     .performer .performer-top-info .user-essential .user-line {
@@ -95,7 +136,8 @@ main {
         border: 1px solid #21cc3d;
         color: #21cc3d;
         font-weight: 700;
-        margin-right: 10px; }
+        margin-right: 10px;
+        background-color: #fff; }
       .performer .performer-top-info .user-essential .user-rating .user-reviews-amount {
         font-size: 24px;
         line-height: 24px;
@@ -103,7 +145,17 @@ main {
         font-weight: 900; }
       .performer .performer-top-info .user-essential .user-rating .user-reviews-link {
         font-size: 12px;
-        vertical-align: bottom; }
+        vertical-align: bottom;
+        text-decoration: none;
+        background: -moz-linear-gradient(left, #000, #000 100%);
+        background: -ms-linear-gradient(left, #000, #000 100%);
+        background: -o-linear-gradient(left, #000, #000 100%);
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
+        background: -webkit-linear-gradient(left, #000, #000 100%);
+        background: linear-gradient(left, #000, #000 100%);
+        background-position: 0 100%;
+        background-size: 10px 1px;
+        background-repeat: repeat-x; }
   .performer .performer-top-info .user-proofs {
     display: flex;
     flex-direction: column;
@@ -301,6 +353,344 @@ main {
       top: -31px;
       background-color: #fff; }
 
+.performer.performer-messages h3 {
+  padding-left: 15px; }
+.performer.performer-messages .message-filter {
+  padding: 30px 15px; }
+  .performer.performer-messages .message-filter .filter-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 10px; }
+  .performer.performer-messages .message-filter .select-inline {
+    display: inline-block;
+    vertical-align: middle; }
+    .performer.performer-messages .message-filter .select-inline .selectric {
+      border-radius: 4px; }
+      .performer.performer-messages .message-filter .select-inline .selectric .selectric-label {
+        height: 30px;
+        line-height: 29px;
+        font-weight: 900;
+        font-size: 12px; }
+      .performer.performer-messages .message-filter .select-inline .selectric .selectric-button {
+        height: 30px;
+        line-height: 29px; }
+        .performer.performer-messages .message-filter .select-inline .selectric .selectric-button:focus {
+          outline: none; }
+  .performer.performer-messages .message-filter .user-new-message-col {
+    text-align: right; }
+    .performer.performer-messages .message-filter .user-new-message-col .btn-white {
+      padding: 10px 20px; }
+      .performer.performer-messages .message-filter .user-new-message-col .btn-white img {
+        vertical-align: bottom;
+        margin-right: 10px; }
+.performer.performer-messages .table-wrapper {
+  padding: 0 15px; }
+.performer.performer-messages .messages-table {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  border-spacing: 0; }
+  .performer.performer-messages .messages-table thead {
+    font-size: 16px;
+    font-weight: 500; }
+    .performer.performer-messages .messages-table thead th {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-right: 1px solid #fff;
+      background-color: #b2d8fd; }
+      .performer.performer-messages .messages-table thead th:first-child {
+        text-align: left;
+        padding-left: 30px; }
+      .performer.performer-messages .messages-table thead th:last-child {
+        border-right: none; }
+  .performer.performer-messages .messages-table tr.table-content:nth-of-type(odd) {
+    background-color: #f7fafc; }
+  .performer.performer-messages .messages-table tr.table-content th {
+    font-weight: 400;
+    font-size: 13px;
+    padding: 20px 0;
+    border-top: 1px solid #e0ecf8; }
+    .performer.performer-messages .messages-table tr.table-content th:first-child {
+      text-align: left;
+      padding-left: 30px;
+      border-left: 1px solid #e0ecf8;
+      font-size: 13px; }
+    .performer.performer-messages .messages-table tr.table-content th:last-child {
+      border-right: 1px solid #e0ecf8; }
+    .performer.performer-messages .messages-table tr.table-content th .message-author {
+      font-weight: 700;
+      text-decoration: none;
+      background: -moz-linear-gradient(left, #000, #000 100%);
+      background: -ms-linear-gradient(left, #000, #000 100%);
+      background: -o-linear-gradient(left, #000, #000 100%);
+      background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
+      background: -webkit-linear-gradient(left, #000, #000 100%);
+      background: linear-gradient(left, #000, #000 100%);
+      background-position: 0 100%;
+      background-size: 10px 1px;
+      background-repeat: repeat-x; }
+    .performer.performer-messages .messages-table tr.table-content th .read-message {
+      color: #257ec2;
+      text-decoration: none;
+      background: -moz-linear-gradient(left, #257ec2, #257ec2 100%);
+      background: -ms-linear-gradient(left, #257ec2, #257ec2 100%);
+      background: -o-linear-gradient(left, #257ec2, #257ec2 100%);
+      background: -webkit-gradient(linear, 0 0, 100% 0, from(#257ec2), to(#257ec2));
+      background: -webkit-linear-gradient(left, #257ec2, #257ec2 100%);
+      background: linear-gradient(left, #257ec2, #257ec2 100%);
+      background-position: 0 100%;
+      background-size: 10px 1px;
+      background-repeat: repeat-x; }
+    .performer.performer-messages .messages-table tr.table-content th .read-message.unnread {
+      font-weight: 700; }
+    .performer.performer-messages .messages-table tr.table-content th .remove-message {
+      padding: 10px 20px;
+      text-transform: uppercase; }
+      .performer.performer-messages .messages-table tr.table-content th .remove-message img {
+        vertical-align: bottom;
+        margin-right: 10px; }
+  .performer.performer-messages .messages-table tr.table-content:last-child th {
+    border-bottom: 1px solid #e0ecf8; }
+  .performer.performer-messages .messages-table .messages-pagination {
+    padding: 30px 0; }
+    .performer.performer-messages .messages-table .messages-pagination a {
+      text-decoration: none;
+      padding: 10px; }
+    .performer.performer-messages .messages-table .messages-pagination a.to-page {
+      -webkit-transition: ease 200ms;
+      -moz-transition: ease 200ms;
+      -ms-transition: ease 200ms;
+      -o-transition: ease 200ms;
+      transition: ease 200ms;
+      font-size: 16px;
+      font-weight: 400;
+      vertical-align: super; }
+      .performer.performer-messages .messages-table .messages-pagination a.to-page:hover {
+        color: #257ec2;
+        text-decoration: underline; }
+    .performer.performer-messages .messages-table .messages-pagination .current {
+      vertical-align: super;
+      padding: 4px 8px;
+      font-weight: 600;
+      color: #257ec2;
+      border-radius: 4px;
+      border: 1px solid #257ec2; }
+    .performer.performer-messages .messages-table .messages-pagination .prev svg, .performer.performer-messages .messages-table .messages-pagination .next svg {
+      -webkit-transition: ease 200ms;
+      -moz-transition: ease 200ms;
+      -ms-transition: ease 200ms;
+      -o-transition: ease 200ms;
+      transition: ease 200ms; }
+    .performer.performer-messages .messages-table .messages-pagination .prev:hover svg, .performer.performer-messages .messages-table .messages-pagination .next:hover svg {
+      fill: #257ec2; }
+
+/**NEW MESSAGE POPUP*/
+#user_new_message {
+  display: none;
+  width: 650px;
+  height: auto;
+  padding: 10px; }
+  #user_new_message .message-container {
+    border: 1px solid #d3e7fb;
+    width: 100%;
+    height: 100%; }
+    #user_new_message .message-container-border {
+      border: 3px solid #aed7ff;
+      width: 100%;
+      height: 100%; }
+    #user_new_message .message-container h4 {
+      font-size: 16px;
+      font-weight: 900;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center; }
+    #user_new_message .message-container .msg-line {
+      height: 1px;
+      background-color: #f8f8f8; }
+    #user_new_message .message-container .msg-form .p-70 {
+      padding: 0 70px; }
+    #user_new_message .message-container .msg-form p {
+      margin-top: 8px;
+      margin-bottom: 0; }
+      #user_new_message .message-container .msg-form p:first-child {
+        margin-top: 20px; }
+      #user_new_message .message-container .msg-form p:last-child {
+        margin-bottom: 20px; }
+    #user_new_message .message-container .msg-form .submit-p {
+      margin-top: 20px;
+      text-align: center; }
+    #user_new_message .message-container .msg-form input {
+      width: 318px; }
+    #user_new_message .message-container .msg-form textarea {
+      width: 318px;
+      height: 150px; }
+    #user_new_message .message-container .msg-form label {
+      font-size: 15px;
+      font-weight: 700;
+      width: 150px;
+      display: inline-block;
+      vertical-align: top; }
+
+.input input {
+  height: 32px;
+  border: 1px solid #dedede;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0 10px; }
+  .input input:focus {
+    outline: none; }
+.input textarea {
+  border: 1px solid #dedede;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 10px;
+  resize: none; }
+  .input textarea:focus {
+    outline: none; }
+
+#user_message {
+  display: none;
+  width: 650px;
+  height: auto;
+  padding: 10px; }
+  #user_message .message-container {
+    border: 1px solid #d3e7fb;
+    width: 100%;
+    height: 100%; }
+    #user_message .message-container-border {
+      border: 3px solid #aed7ff;
+      width: 100%;
+      height: 100%; }
+    #user_message .message-container h4 {
+      font-size: 16px;
+      font-weight: 900;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center; }
+    #user_message .message-container .msg-line {
+      height: 1px;
+      background-color: #f8f8f8; }
+    #user_message .message-container .msg-content {
+      font-size: 15px;
+      padding: 0 40px; }
+      #user_message .message-container .msg-content .msg-content-line {
+        margin-top: 20px; }
+        #user_message .message-container .msg-content .msg-content-line p {
+          margin-bottom: 15px;
+          margin-top: 0; }
+          #user_message .message-container .msg-content .msg-content-line p:first-child {
+            font-weight: 700;
+            margin-bottom: 10px; }
+    #user_message .message-container .msg-form .input {
+      padding: 0 40px; }
+    #user_message .message-container .msg-form textarea {
+      width: 100%;
+      height: 150px;
+      font-size: 15px;
+      padding: 20px;
+      /* Firefox 19+ */
+      /* Firefox 18- */ }
+      #user_message .message-container .msg-form textarea::-webkit-input-placeholder {
+        color: #5c5c5c; }
+      #user_message .message-container .msg-form textarea::-moz-placeholder {
+        color: #5c5c5c; }
+      #user_message .message-container .msg-form textarea:-moz-placeholder {
+        color: #5c5c5c; }
+      #user_message .message-container .msg-form textarea:-ms-input-placeholder {
+        color: #5c5c5c; }
+    #user_message .message-container .msg-form .submit-p {
+      text-align: center;
+      margin: 30px 0; }
+
+/**PERFORMER TOP SECTION BLUE*/
+section.performer {
+  margin-top: 30px; }
+  section.performer .performer-top-info {
+    background-color: #b2d8fd;
+    border-radius: 4px; }
+    section.performer .performer-top-info .user-avatar {
+      margin-left: 15px;
+      background-color: #fff; }
+    section.performer .performer-top-info .user-dark-line {
+      height: 1px;
+      background-color: #5e5e5e;
+      margin: 20px 0; }
+    section.performer .performer-top-info .logout .btn-white {
+      border-color: transparent;
+      padding: 10px 20px; }
+  section.performer .user-account-col {
+    padding: 0 0 0 30px;
+    position: relative; }
+    section.performer .user-account-col:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 246px;
+      position: absolute;
+      border-left: 1px dotted #5e5e5e;
+      top: 30px;
+      left: 0; }
+    section.performer .user-account-col h5 {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0; }
+    section.performer .user-account-col-content {
+      font-size: 15px;
+      margin-top: 15px;
+      background-color: #fff;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 0 4px #ccc;
+      -moz-box-shadow: 0 0 4px #ccc;
+      box-shadow: 0 0 4px #ccc; }
+      section.performer .user-account-col-content p {
+        border-bottom: 1px solid #e0ecf8;
+        padding: 20px 0 20px 30px;
+        margin: 0; }
+        section.performer .user-account-col-content p a.msg-link {
+          color: #1574bd;
+          text-decoration: none;
+          background: -moz-linear-gradient(left, #1574bd, #1574bd 100%);
+          background: -ms-linear-gradient(left, #1574bd, #1574bd 100%);
+          background: -o-linear-gradient(left, #1574bd, #1574bd 100%);
+          background: -webkit-gradient(linear, 0 0, 100% 0, from(#1574bd), to(#1574bd));
+          background: -webkit-linear-gradient(left, #1574bd, #1574bd 100%);
+          background: linear-gradient(left, #1574bd, #1574bd 100%);
+          background-position: 0 100%;
+          background-size: 10px 1px;
+          background-repeat: repeat-x; }
+        section.performer .user-account-col-content p .uac_img_wrap {
+          display: inline-block;
+          min-width: 30px; }
+        section.performer .user-account-col-content p a {
+          color: #1574bd;
+          text-decoration: none;
+          background: -moz-linear-gradient(left, #1574bd, #1574bd 50%, transparent 50%);
+          background: -ms-linear-gradient(left, #1574bd, #1574bd 50%, transparent 50%);
+          background: -o-linear-gradient(left, #1574bd, #1574bd 50%, transparent 50%);
+          background: -webkit-gradient(linear, 0 0, 100% 0, from(#1574bd), color-stop(0.5, #1574bd), color-stop(0.5, transparent));
+          background: -webkit-linear-gradient(left, #1574bd, #1574bd 50%, transparent 50%);
+          background: linear-gradient(left, #1574bd, #1574bd 50%, transparent 50%);
+          background-size: 2px 1px;
+          background-repeat: repeat-x;
+          background-position: 0 100%; }
+        section.performer .user-account-col-content p a.support {
+          color: #000;
+          background: -moz-linear-gradient(left, #000, #000 50%, transparent 50%);
+          background: -ms-linear-gradient(left, #000, #000 50%, transparent 50%);
+          background: -o-linear-gradient(left, #000, #000 50%, transparent 50%);
+          background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), color-stop(0.5, #000), color-stop(0.5, transparent));
+          background: -webkit-linear-gradient(left, #000, #000 50%, transparent 50%);
+          background: linear-gradient(left, #000, #000 50%, transparent 50%);
+          background-size: 2px 1px;
+          background-repeat: repeat-x;
+          background-position: 0 100%; }
+        section.performer .user-account-col-content p a.btn-money {
+          padding: 10px 15px;
+          color: #000;
+          text-decoration: none;
+          background: none;
+          margin-left: 14px; }
+
 /**FOOTER*/
 footer {
   background-color: #fff;
@@ -323,7 +713,17 @@ footer {
       max-width: 50%;
       margin-bottom: 12px; }
       footer .footer-nav li a {
-        font-size: 13px; }
+        font-size: 13px;
+        text-decoration: none;
+        background: -moz-linear-gradient(left, #000, #000 100%);
+        background: -ms-linear-gradient(left, #000, #000 100%);
+        background: -o-linear-gradient(left, #000, #000 100%);
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
+        background: -webkit-linear-gradient(left, #000, #000 100%);
+        background: linear-gradient(left, #000, #000 100%);
+        background-position: 0 100%;
+        background-size: 10px 1px;
+        background-repeat: repeat-x; }
   footer .footer-social {
     margin-top: 25px; }
     footer .footer-social a {
@@ -373,6 +773,12 @@ footer {
     .performer .user-testemonials_item:nth-child(even) {
       padding-left: 0; }
 
+  section.performer .user-account-col {
+    margin-top: 30px;
+    padding-left: 15px; }
+    section.performer .user-account-col:after {
+      display: none; }
+
   footer .agreement {
     padding: 25px 0; }
   footer .footer-phone {
@@ -386,6 +792,10 @@ footer {
     margin-top: 25px; }
   .performer .performer-top-info .user-main-prices {
     padding-left: 30px; }
+
+  .performer.performer-messages .message-filter .user-new-message-col {
+    text-align: left;
+    margin-top: 20px; }
 
   footer .footer-logo {
     display: block;
@@ -411,6 +821,65 @@ footer {
     text-align: center; }
   footer .work-hours {
     text-align: center; } }
+@media (max-width: 768px) {
+  .wrapper header .info {
+    margin-top: 20px;
+    padding: 0; }
+    .wrapper header .info .info_title:before {
+      display: none; }
+  .wrapper header .login {
+    margin-top: 20px; }
+  .wrapper header .contacts p {
+    display: none; }
+  .wrapper section.search form {
+    text-align: center;
+    width: 100%; }
+    .wrapper section.search form .input {
+      width: 100%; }
+      .wrapper section.search form .input input {
+        border-radius: 0; }
+    .wrapper section.search form .select {
+      text-align: left;
+      margin-left: 0;
+      margin-top: 15px;
+      width: 100%; }
+      .wrapper section.search form .select .selectric {
+        border-radius: 0; }
+    .wrapper section.search form .submit {
+      margin-top: 15px; }
+
+  #user_message {
+    width: 300px; }
+    #user_message .message-container .msg-content {
+      padding: 0 10px; }
+    #user_message .message-container .msg-form .input {
+      padding: 0 10px; }
+      #user_message .message-container .msg-form .input textarea {
+        height: 80px; }
+
+  #user_new_message {
+    width: 300px;
+    height: auto; }
+    #user_new_message .message-container .msg-form .p-70 {
+      padding: 0 10px; }
+    #user_new_message .message-container .msg-form p:first-child {
+      margin-top: 10px; }
+    #user_new_message .message-container .msg-form p:last-child {
+      margin-bottom: 10px; }
+    #user_new_message .message-container .msg-form .submit-p {
+      margin-top: 10px; }
+    #user_new_message .message-container .msg-form input {
+      width: 100%; }
+    #user_new_message .message-container .msg-form textarea {
+      width: 100%; }
+    #user_new_message .message-container .msg-form label {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px; }
+
+  section.bread ul {
+    width: 100%;
+    text-align: center; } }
 @media (max-width: 640px) {
   .performer .performer-services .table-wrapper {
     overflow-x: scroll; }
@@ -418,6 +887,36 @@ footer {
     font-size: 26px;
     padding-right: 15px; }
     .performer .user-testemonials_item .user-testemonials_item_rating span {
-      font-size: 18px; } }
+      font-size: 18px; }
+
+  .performer.performer-messages .messages-table tr.table-content th .remove-message {
+    padding: 2px;
+    font-size: 0; }
+    .performer.performer-messages .messages-table tr.table-content th .remove-message img {
+      margin: 0; }
+  .performer.performer-messages .messages-table tr.table-content th:first-child {
+    padding-left: 15px; }
+  .performer.performer-messages .messages-table thead th {
+    font-size: 14px; }
+  .performer.performer-messages .messages-table thead th:first-child {
+    padding-left: 15px; }
+  .performer.performer-messages .table-wrapper {
+    max-width: 100%;
+    overflow-x: scroll; } }
+@media (max-width: 480px) {
+  .performer.performer-messages .message-filter .select-inline {
+    width: 100%;
+    margin-top: 15px; } }
+@media (max-width: 380px) {
+  .wrapper header .login a.cabinet {
+    margin-top: 15px; }
+  .wrapper header .contacts a.fav.mini {
+    position: absolute;
+    top: 50px;
+    left: -15px; }
+  .wrapper header .contacts a.cart.mini {
+    position: absolute;
+    top: 50px;
+    left: 30px; } }
 
 /*# sourceMappingURL=main.css.map */
