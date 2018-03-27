@@ -43,6 +43,23 @@ img {
   .btn-white:hover {
     border-color: #000; }
 
+.btn-grey {
+  display: inline-block;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #bab9b9;
+  text-decoration: none;
+  -webkit-transition: ease 250ms;
+  -moz-transition: ease 250ms;
+  -ms-transition: ease 250ms;
+  -o-transition: ease 250ms;
+  transition: ease 250ms;
+  background-color: #e4e4e4; }
+  .btn-grey:hover {
+    border-color: #000; }
+
 .btn-orange {
   display: inline-block;
   padding: 15px 50px;
@@ -66,6 +83,74 @@ img {
     -webkit-box-shadow: 4px 4px 0 0 #be5304;
     box-shadow: 4px 4px 0 0 #be5304; }
 
+/**MOBILE MENU*/
+#nav-icon {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: -30px;
+  right: 15px;
+  width: 50px;
+  height: 45px;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer; }
+
+#nav-icon.fixed {
+  position: fixed; }
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #f97819;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
+
+#nav-icon span:nth-child(1) {
+  top: 0px; }
+
+#nav-icon span:nth-child(2) {
+  top: 18px; }
+
+#nav-icon span:nth-child(3) {
+  top: 36px; }
+
+#nav-icon.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+#nav-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px; }
+
+#nav-icon.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg); }
+
 /**MAIN*/
 main {
   padding: 30px 0; }
@@ -86,218 +171,213 @@ main {
   padding: 0;
   margin: 0; }
 .performer .row {
-  border-bottom: 1px solid #e6e6e6; }
-.performer .performer-top-info {
-  padding: 30px 0; }
-  .performer .performer-top-info .user-avatar {
-    padding: 10px;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    -moz-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 10px #ccc; }
-    .performer .performer-top-info .user-avatar img {
-      width: 100%; }
-  .performer .performer-top-info .user-essential {
-    display: flex; }
-    .performer .performer-top-info .user-essential .user-ico {
-      padding: 0 12px; }
-      .performer .performer-top-info .user-essential .user-ico img {
-        margin-top: 8px; }
-    .performer .performer-top-info .user-essential .user-name {
-      font-size: 27px;
-      padding: 0;
-      margin: 0; }
-    .performer .performer-top-info .user-essential .user-profession {
-      margin: 12px 0 18px; }
-      .performer .performer-top-info .user-essential .user-profession a {
-        font-size: 18px;
-        text-decoration: none;
-        background: -moz-linear-gradient(left, #000, #000 100%);
-        background: -ms-linear-gradient(left, #000, #000 100%);
-        background: -o-linear-gradient(left, #000, #000 100%);
-        background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
-        background: -webkit-linear-gradient(left, #000, #000 100%);
-        background: linear-gradient(left, #000, #000 100%);
-        background-position: 0 100%;
-        background-size: 10px 1px;
-        background-repeat: repeat-x; }
-    .performer .performer-top-info .user-essential .last-visit {
-      font-size: 12px; }
-    .performer .performer-top-info .user-essential .user-line {
-      width: 226px;
-      height: 1px;
-      background-color: #e6e6e6; }
-    .performer .performer-top-info .user-essential .user-experience {
-      font-size: 12px; }
-    .performer .performer-top-info .user-essential .user-rating {
-      margin-top: 18px; }
-      .performer .performer-top-info .user-essential .user-rating span.rating {
-        display: inline-block;
-        padding: 4px 15px;
-        border: 1px solid #21cc3d;
-        color: #21cc3d;
-        font-weight: 700;
-        margin-right: 10px;
-        background-color: #fff; }
-      .performer .performer-top-info .user-essential .user-rating .user-reviews-amount {
-        font-size: 24px;
-        line-height: 24px;
-        vertical-align: text-top;
-        font-weight: 900; }
-      .performer .performer-top-info .user-essential .user-rating .user-reviews-link {
-        font-size: 12px;
-        vertical-align: bottom;
-        text-decoration: none;
-        background: -moz-linear-gradient(left, #000, #000 100%);
-        background: -ms-linear-gradient(left, #000, #000 100%);
-        background: -o-linear-gradient(left, #000, #000 100%);
-        background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
-        background: -webkit-linear-gradient(left, #000, #000 100%);
-        background: linear-gradient(left, #000, #000 100%);
-        background-position: 0 100%;
-        background-size: 10px 1px;
-        background-repeat: repeat-x; }
-  .performer .performer-top-info .user-proofs {
-    display: flex;
-    flex-direction: column;
-    padding-left: 30px;
-    border-left: dotted #e6e6e6;
-    border-right: dotted #e6e6e6; }
-    .performer .performer-top-info .user-proofs span {
-      font-weight: 700;
-      font-size: 13px;
-      padding: 10px 0 0; }
-      .performer .performer-top-info .user-proofs span:after {
-        content: '';
-        display: block;
-        height: 1px;
-        background-color: #e6e6e6;
-        width: 200px;
-        margin-top: 10px; }
-      .performer .performer-top-info .user-proofs span:last-child:after {
-        display: none; }
-      .performer .performer-top-info .user-proofs span img {
-        margin-right: 15px;
-        vertical-align: bottom; }
-  .performer .performer-top-info .user-main-prices {
-    display: flex;
-    flex-direction: column; }
-    .performer .performer-top-info .user-main-prices p {
-      font-weight: 700;
-      font-size: 13px;
-      padding: 10px 0 0;
-      margin: 0; }
-      .performer .performer-top-info .user-main-prices p span.mp-img {
-        display: inline-block;
-        min-width: 50px; }
-        .performer .performer-top-info .user-main-prices p span.mp-img img {
-          vertical-align: bottom; }
-      .performer .performer-top-info .user-main-prices p span.mp-price {
-        font-size: 15px; }
-        .performer .performer-top-info .user-main-prices p span.mp-price b {
-          font-size: 18px; }
-      .performer .performer-top-info .user-main-prices p:after {
-        content: '';
-        display: block;
-        height: 1px;
-        background-color: #e6e6e6;
-        width: 200px;
-        margin-top: 10px; }
-      .performer .performer-top-info .user-main-prices p:last-child:after {
-        display: none; }
-.performer .performer-map {
-  padding: 30px 0; }
-  .performer .performer-map address {
-    font-style: normal;
-    font-size: 18px;
-    background-image: url("../img/flag.png");
-    padding: 30px 0 30px 30px;
-    background-position: left center;
-    background-repeat: no-repeat; }
-.performer .performer-services {
-  padding: 30px 0; }
-  .performer .performer-services .table-wrapper {
-    max-width: 100%; }
-  .performer .performer-services table.services-table {
-    margin-top: 30px;
-    width: 100%;
-    border-spacing: 0; }
-    .performer .performer-services table.services-table thead {
-      font-size: 16px;
-      font-weight: 500; }
-      .performer .performer-services table.services-table thead th {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-right: 1px solid #fff;
-        background-color: #b2d8fd; }
-        .performer .performer-services table.services-table thead th:first-child {
-          text-align: left;
-          padding-left: 30px; }
-        .performer .performer-services table.services-table thead th:last-child {
-          border-right: none; }
-    .performer .performer-services table.services-table tr.table-subheading th {
-      font-weight: 900;
-      font-size: 15px;
-      text-align: left;
-      padding: 30px;
-      background-image: url("../img/service-flag.png");
-      background-position: 2px center;
-      background-repeat: no-repeat; }
-    .performer .performer-services table.services-table tr.table-content:nth-of-type(even) {
-      background-color: #f7fafc; }
-    .performer .performer-services table.services-table tr.table-content th {
-      font-weight: 400;
-      font-size: 13px;
-      padding: 20px 0;
-      border-top: 1px solid #e0ecf8; }
-      .performer .performer-services table.services-table tr.table-content th:first-child {
-        text-align: left;
-        padding-left: 30px;
-        border-left: 1px solid #e0ecf8;
-        font-size: 13px; }
-      .performer .performer-services table.services-table tr.table-content th:nth-child(2) {
-        font-size: 15px; }
-      .performer .performer-services table.services-table tr.table-content th:nth-child(3) {
-        font-size: 15px; }
-        .performer .performer-services table.services-table tr.table-content th:nth-child(3) b {
-          font-weight: 900;
-          font-size: 18px; }
-      .performer .performer-services table.services-table tr.table-content th:last-child {
-        border-right: 1px solid #e0ecf8;
-        font-size: 15px; }
-        .performer .performer-services table.services-table tr.table-content th:last-child b {
-          font-weight: 900;
-          font-size: 18px; }
-    .performer .performer-services table.services-table tr.table-content:last-child th {
-      border-bottom: 1px solid #e0ecf8; }
-.performer .works-gallery {
-  padding: 30px 0; }
-  .performer .works-gallery h3 {
-    margin-bottom: 30px; }
-  .performer .works-gallery_item {
-    position: relative; }
-    .performer .works-gallery_item img {
-      border-radius: 6px; }
-    .performer .works-gallery_item p {
-      font-size: 13px;
-      font-weight: 300;
-      font-style: italic; }
-    .performer .works-gallery_item .icon-zoom {
-      position: absolute;
-      top: 10px;
-      left: 25px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 30px 15px; }
+.performer .performer-top-info .user-avatar {
+  padding: 10px;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  -moz-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc; }
+  .performer .performer-top-info .user-avatar img {
+    width: 100%; }
+.performer .performer-top-info .user-essential {
+  display: flex; }
+  .performer .performer-top-info .user-essential .user-ico {
+    padding: 0 12px; }
+    .performer .performer-top-info .user-essential .user-ico img {
+      margin-top: 8px; }
+  .performer .performer-top-info .user-essential .user-name {
+    font-size: 27px;
+    padding: 0;
+    margin: 0; }
+  .performer .performer-top-info .user-essential .user-profession {
+    margin: 12px 0 18px; }
+    .performer .performer-top-info .user-essential .user-profession a {
+      font-size: 18px;
+      text-decoration: none;
+      background: -moz-linear-gradient(left, #000, #000 100%);
+      background: -ms-linear-gradient(left, #000, #000 100%);
+      background: -o-linear-gradient(left, #000, #000 100%);
+      background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
+      background: -webkit-linear-gradient(left, #000, #000 100%);
+      background: linear-gradient(left, #000, #000 100%);
+      background-position: 0 100%;
+      background-size: 10px 1px;
+      background-repeat: repeat-x; }
+  .performer .performer-top-info .user-essential .last-visit {
+    font-size: 12px; }
+  .performer .performer-top-info .user-essential .user-line {
+    width: 226px;
+    height: 1px;
+    background-color: #e6e6e6; }
+  .performer .performer-top-info .user-essential .user-experience {
+    font-size: 12px; }
+  .performer .performer-top-info .user-essential .user-rating {
+    margin-top: 18px; }
+    .performer .performer-top-info .user-essential .user-rating span.rating {
       display: inline-block;
-      width: 34px;
-      height: 34px;
-      background: url(../img/icon_zoom.png) center no-repeat; }
-      .performer .works-gallery_item .icon-zoom:focus {
-        outline: none; }
+      padding: 4px 15px;
+      border: 1px solid #21cc3d;
+      color: #21cc3d;
+      font-weight: 700;
+      margin-right: 10px;
+      background-color: #fff; }
+    .performer .performer-top-info .user-essential .user-rating .user-reviews-amount {
+      font-size: 24px;
+      line-height: 24px;
+      vertical-align: text-top;
+      font-weight: 900; }
+    .performer .performer-top-info .user-essential .user-rating .user-reviews-link {
+      font-size: 12px;
+      vertical-align: bottom;
+      text-decoration: none;
+      background: -moz-linear-gradient(left, #000, #000 100%);
+      background: -ms-linear-gradient(left, #000, #000 100%);
+      background: -o-linear-gradient(left, #000, #000 100%);
+      background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
+      background: -webkit-linear-gradient(left, #000, #000 100%);
+      background: linear-gradient(left, #000, #000 100%);
+      background-position: 0 100%;
+      background-size: 10px 1px;
+      background-repeat: repeat-x; }
+.performer .performer-top-info .user-proofs {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  border-left: dotted #e6e6e6;
+  border-right: dotted #e6e6e6; }
+  .performer .performer-top-info .user-proofs span {
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 0 0; }
+    .performer .performer-top-info .user-proofs span:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #e6e6e6;
+      width: 200px;
+      margin-top: 10px; }
+    .performer .performer-top-info .user-proofs span:last-child:after {
+      display: none; }
+    .performer .performer-top-info .user-proofs span img {
+      margin-right: 15px;
+      vertical-align: bottom; }
+.performer .performer-top-info .user-main-prices {
+  display: flex;
+  flex-direction: column; }
+  .performer .performer-top-info .user-main-prices p {
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 0 0;
+    margin: 0; }
+    .performer .performer-top-info .user-main-prices p span.mp-img {
+      display: inline-block;
+      min-width: 50px; }
+      .performer .performer-top-info .user-main-prices p span.mp-img img {
+        vertical-align: bottom; }
+    .performer .performer-top-info .user-main-prices p span.mp-price {
+      font-size: 15px; }
+      .performer .performer-top-info .user-main-prices p span.mp-price b {
+        font-size: 18px; }
+    .performer .performer-top-info .user-main-prices p:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #e6e6e6;
+      width: 200px;
+      margin-top: 10px; }
+    .performer .performer-top-info .user-main-prices p:last-child:after {
+      display: none; }
+.performer .performer-map address {
+  font-style: normal;
+  font-size: 18px;
+  background-image: url("../img/flag.png");
+  padding: 30px 0 30px 30px;
+  background-position: left center;
+  background-repeat: no-repeat; }
+.performer .performer-services .table-wrapper {
+  max-width: 100%; }
+.performer .performer-services table.services-table {
+  margin-top: 30px;
+  width: 100%;
+  border-spacing: 0; }
+  .performer .performer-services table.services-table thead {
+    font-size: 16px;
+    font-weight: 500; }
+    .performer .performer-services table.services-table thead th {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      border-right: 1px solid #fff;
+      background-color: #b2d8fd; }
+      .performer .performer-services table.services-table thead th:first-child {
+        text-align: left;
+        padding-left: 30px; }
+      .performer .performer-services table.services-table thead th:last-child {
+        border-right: none; }
+  .performer .performer-services table.services-table tr.table-subheading th {
+    font-weight: 900;
+    font-size: 15px;
+    text-align: left;
+    padding: 30px;
+    background-image: url("../img/service-flag.png");
+    background-position: 2px center;
+    background-repeat: no-repeat; }
+  .performer .performer-services table.services-table tr.table-content:nth-of-type(even) {
+    background-color: #f7fafc; }
+  .performer .performer-services table.services-table tr.table-content th {
+    font-weight: 400;
+    font-size: 13px;
+    padding: 20px 0;
+    border-top: 1px solid #e0ecf8; }
+    .performer .performer-services table.services-table tr.table-content th:first-child {
+      text-align: left;
+      padding-left: 30px;
+      border-left: 1px solid #e0ecf8;
+      font-size: 13px; }
+    .performer .performer-services table.services-table tr.table-content th:nth-child(2) {
+      font-size: 15px; }
+    .performer .performer-services table.services-table tr.table-content th:nth-child(3) {
+      font-size: 15px; }
+      .performer .performer-services table.services-table tr.table-content th:nth-child(3) b {
+        font-weight: 900;
+        font-size: 18px; }
+    .performer .performer-services table.services-table tr.table-content th:last-child {
+      border-right: 1px solid #e0ecf8;
+      font-size: 15px; }
+      .performer .performer-services table.services-table tr.table-content th:last-child b {
+        font-weight: 900;
+        font-size: 18px; }
+  .performer .performer-services table.services-table tr.table-content:last-child th {
+    border-bottom: 1px solid #e0ecf8; }
+.performer .works-gallery h3 {
+  margin-bottom: 30px; }
+.performer .works-gallery_item {
+  position: relative; }
+  .performer .works-gallery_item img {
+    border-radius: 6px; }
+  .performer .works-gallery_item p {
+    font-size: 13px;
+    font-weight: 300;
+    font-style: italic; }
+  .performer .works-gallery_item .icon-zoom {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background: url(../img/icon_zoom.png) center no-repeat; }
+    .performer .works-gallery_item .icon-zoom:focus {
+      outline: none; }
 .performer .user-testemonials {
   padding: 30px 0; }
-  .performer .user-testemonials h3 small {
-    font-weight: 700;
-    font-size: 12px;
-    color: #7d7d7d;
-    vertical-align: text-top; }
+  .performer .user-testemonials h3 {
+    padding-left: 15px; }
+    .performer .user-testemonials h3 small {
+      font-weight: 700;
+      font-size: 12px;
+      color: #7d7d7d;
+      vertical-align: text-top; }
   .performer .user-testemonials_item {
     display: flex;
     padding: 30px 100px 0 15px;
@@ -309,7 +389,7 @@ main {
       left: 0;
       display: block;
       height: 1px;
-      width: 100%;
+      width: calc(100% + 15px);
       background-color: #e0ecf8; }
     .performer .user-testemonials_item:nth-child(odd) {
       border-right: 1px dotted #e0ecf8; }
@@ -320,7 +400,8 @@ main {
       font-size: 30px;
       color: #eb1e1e;
       line-height: 16px;
-      padding-right: 20px; }
+      padding-right: 20px;
+      padding-left: 15px; }
       .performer .user-testemonials_item_rating span {
         font-size: 26px;
         vertical-align: super; }
@@ -329,6 +410,8 @@ main {
       font-size: 15px; }
     .performer .user-testemonials_item_info p {
       font-size: 15px; }
+    .performer .user-testemonials_item_info .client {
+      color: #7e7e7e; }
     .performer .user-testemonials_item_info .testemonial-author {
       display: flex;
       justify-content: space-between; }
@@ -353,38 +436,32 @@ main {
       top: -31px;
       background-color: #fff; }
 
-.performer.performer-messages h3 {
-  padding-left: 15px; }
-.performer.performer-messages .message-filter {
-  padding: 30px 15px; }
-  .performer.performer-messages .message-filter .filter-title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-right: 10px; }
-  .performer.performer-messages .message-filter .select-inline {
-    display: inline-block;
-    vertical-align: middle; }
-    .performer.performer-messages .message-filter .select-inline .selectric {
-      border-radius: 4px; }
-      .performer.performer-messages .message-filter .select-inline .selectric .selectric-label {
-        height: 30px;
-        line-height: 29px;
-        font-weight: 900;
-        font-size: 12px; }
-      .performer.performer-messages .message-filter .select-inline .selectric .selectric-button {
-        height: 30px;
-        line-height: 29px; }
-        .performer.performer-messages .message-filter .select-inline .selectric .selectric-button:focus {
-          outline: none; }
-  .performer.performer-messages .message-filter .user-new-message-col {
-    text-align: right; }
-    .performer.performer-messages .message-filter .user-new-message-col .btn-white {
-      padding: 10px 20px; }
-      .performer.performer-messages .message-filter .user-new-message-col .btn-white img {
-        vertical-align: bottom;
-        margin-right: 10px; }
-.performer.performer-messages .table-wrapper {
-  padding: 0 15px; }
+.performer.performer-messages .message-filter .filter-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-right: 10px; }
+.performer.performer-messages .message-filter .select-inline {
+  display: inline-block;
+  vertical-align: middle; }
+  .performer.performer-messages .message-filter .select-inline .selectric {
+    border-radius: 4px; }
+    .performer.performer-messages .message-filter .select-inline .selectric .selectric-label {
+      height: 30px;
+      line-height: 29px;
+      font-weight: 900;
+      font-size: 12px; }
+    .performer.performer-messages .message-filter .select-inline .selectric .selectric-button {
+      height: 30px;
+      line-height: 29px; }
+      .performer.performer-messages .message-filter .select-inline .selectric .selectric-button:focus {
+        outline: none; }
+.performer.performer-messages .message-filter .user-new-message-col {
+  text-align: right; }
+  .performer.performer-messages .message-filter .user-new-message-col .btn-white {
+    padding: 10px 20px; }
+    .performer.performer-messages .message-filter .user-new-message-col .btn-white img {
+      vertical-align: bottom;
+      margin-right: 10px; }
 .performer.performer-messages .messages-table {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -484,12 +561,84 @@ main {
     .performer.performer-messages .messages-table .messages-pagination .prev:hover svg, .performer.performer-messages .messages-table .messages-pagination .next:hover svg {
       fill: #257ec2; }
 
+/**TASKS*/
+.performer.performer-tasks .tasks-filter a {
+  margin-right: 20px; }
+.performer.performer-tasks .tasks-filter .btn-white {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500; }
+.performer.performer-tasks .tasks-table {
+  margin-bottom: 30px;
+  width: 100%;
+  border-spacing: 0; }
+  .performer.performer-tasks .tasks-table thead {
+    font-size: 16px;
+    font-weight: 500; }
+    .performer.performer-tasks .tasks-table thead th {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-right: 1px solid #fff;
+      background-color: #b2d8fd; }
+      .performer.performer-tasks .tasks-table thead th:first-child {
+        text-align: left;
+        padding-left: 30px; }
+      .performer.performer-tasks .tasks-table thead th:last-child {
+        border-right: none; }
+  .performer.performer-tasks .tasks-table tr.table-content:nth-of-type(odd) {
+    background-color: #f7fafc; }
+  .performer.performer-tasks .tasks-table tr.table-content:last-child th {
+    border-bottom: 1px solid #e0ecf8; }
+  .performer.performer-tasks .tasks-table tr.table-content .btn-white {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px; }
+    .performer.performer-tasks .tasks-table tr.table-content .btn-white img {
+      margin-left: 8px; }
+  .performer.performer-tasks .tasks-table tr.table-content th {
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 400; }
+    .performer.performer-tasks .tasks-table tr.table-content th:first-child {
+      text-align: left;
+      padding-left: 30px;
+      border-left: 1px solid #e0ecf8;
+      font-size: 13px; }
+    .performer.performer-tasks .tasks-table tr.table-content th:last-child {
+      border-right: 1px solid #e0ecf8; }
+    .performer.performer-tasks .tasks-table tr.table-content th:nth-child(3) {
+      width: 120px; }
+    .performer.performer-tasks .tasks-table tr.table-content th a:not(.task-info):not(.btn-white) {
+      text-decoration: none;
+      background: -moz-linear-gradient(left, #000, #000 100%);
+      background: -ms-linear-gradient(left, #000, #000 100%);
+      background: -o-linear-gradient(left, #000, #000 100%);
+      background: -webkit-gradient(linear, 0 0, 100% 0, from(#000), to(#000));
+      background: -webkit-linear-gradient(left, #000, #000 100%);
+      background: linear-gradient(left, #000, #000 100%);
+      background-position: 0 100%;
+      background-size: 10px 1px;
+      background-repeat: repeat-x; }
+    .performer.performer-tasks .tasks-table tr.table-content th .message-author {
+      margin-left: 8px;
+      font-size: 14px;
+      font-weight: 700; }
+  .performer.performer-tasks .tasks-table tr.table-content th.task-price {
+    font-size: 15px; }
+    .performer.performer-tasks .tasks-table tr.table-content th.task-price b {
+      font-size: 16px;
+      font-weight: 900; }
+
 /**NEW MESSAGE POPUP*/
 #user_new_message {
   display: none;
   width: 650px;
   height: auto;
-  padding: 10px; }
+  padding: 10px;
+  background-color: #f8f8f8; }
   #user_new_message .message-container {
     border: 1px solid #d3e7fb;
     width: 100%;
@@ -506,7 +655,7 @@ main {
       text-align: center; }
     #user_new_message .message-container .msg-line {
       height: 1px;
-      background-color: #f8f8f8; }
+      background-color: #eaeaea; }
     #user_new_message .message-container .msg-form .p-70 {
       padding: 0 70px; }
     #user_new_message .message-container .msg-form p {
@@ -520,10 +669,12 @@ main {
       margin-top: 20px;
       text-align: center; }
     #user_new_message .message-container .msg-form input {
-      width: 318px; }
+      width: 318px;
+      background-color: #fff; }
     #user_new_message .message-container .msg-form textarea {
       width: 318px;
-      height: 150px; }
+      height: 150px;
+      background-color: #fff; }
     #user_new_message .message-container .msg-form label {
       font-size: 15px;
       font-weight: 700;
@@ -536,23 +687,36 @@ main {
   border: 1px solid #dedede;
   font-size: 15px;
   font-weight: 400;
-  padding: 0 10px; }
+  padding: 0 10px;
+  -webkit-transition: ease 250ms;
+  -moz-transition: ease 250ms;
+  -ms-transition: ease 250ms;
+  -o-transition: ease 250ms;
+  transition: ease 250ms; }
   .input input:focus {
-    outline: none; }
+    outline: none;
+    border-color: #000; }
 .input textarea {
   border: 1px solid #dedede;
   font-size: 14px;
   font-weight: 400;
   padding: 5px 10px;
-  resize: none; }
+  resize: none;
+  -webkit-transition: ease 250ms;
+  -moz-transition: ease 250ms;
+  -ms-transition: ease 250ms;
+  -o-transition: ease 250ms;
+  transition: ease 250ms; }
   .input textarea:focus {
-    outline: none; }
+    outline: none;
+    border-color: #000; }
 
 #user_message {
   display: none;
   width: 650px;
   height: auto;
-  padding: 10px; }
+  padding: 10px;
+  background-color: #f8f8f8; }
   #user_message .message-container {
     border: 1px solid #d3e7fb;
     width: 100%;
@@ -569,7 +733,7 @@ main {
       text-align: center; }
     #user_message .message-container .msg-line {
       height: 1px;
-      background-color: #f8f8f8; }
+      background-color: #eaeaea; }
     #user_message .message-container .msg-content {
       font-size: 15px;
       padding: 0 40px; }
@@ -589,7 +753,8 @@ main {
       font-size: 15px;
       padding: 20px;
       /* Firefox 19+ */
-      /* Firefox 18- */ }
+      /* Firefox 18- */
+      background-color: #fff; }
       #user_message .message-container .msg-form textarea::-webkit-input-placeholder {
         color: #5c5c5c; }
       #user_message .message-container .msg-form textarea::-moz-placeholder {
@@ -601,6 +766,166 @@ main {
     #user_message .message-container .msg-form .submit-p {
       text-align: center;
       margin: 30px 0; }
+
+/**TASK REVIEW*/
+#task-review {
+  display: none;
+  width: 650px;
+  height: auto;
+  padding: 10px;
+  background-color: #f8f8f8; }
+  #task-review .message-container {
+    border: 1px solid #d3e7fb;
+    width: 100%;
+    height: 100%; }
+    #task-review .message-container-border {
+      border: 3px solid #aed7ff;
+      width: 100%;
+      height: 100%; }
+    #task-review .message-container h4 {
+      font-size: 18px;
+      font-weight: 900;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center; }
+    #task-review .message-container .msg-line {
+      height: 1px;
+      background-color: #eaeaea; }
+    #task-review .message-container .task-review-form p.input {
+      padding: 0 45px; }
+      #task-review .message-container .task-review-form p.input label {
+        width: 160px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 15px;
+        font-weight: 700; }
+      #task-review .message-container .task-review-form p.input input {
+        width: 320px;
+        background-color: #fff;
+        font-size: 15px; }
+      #task-review .message-container .task-review-form p.input textarea {
+        width: 320px;
+        height: 150px;
+        background-color: #fff;
+        font-size: 15px; }
+    #task-review .message-container .task-review-form p.submit-p {
+      text-align: center; }
+
+/**STARS*/
+/* Rating Star Widgets Style */
+.rating-stars {
+  margin: 20px 0 10px; }
+  .rating-stars ul {
+    list-style-type: none;
+    padding: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    text-align: center; }
+    .rating-stars ul li.star {
+      display: inline-block; }
+      .rating-stars ul li.star svg {
+        -webkit-transition: ease 250ms;
+        -moz-transition: ease 250ms;
+        -ms-transition: ease 250ms;
+        -o-transition: ease 250ms;
+        transition: ease 250ms; }
+    .rating-stars ul li.star.hover > svg {
+      fill: #ff8023; }
+    .rating-stars ul li.star.selected > svg {
+      fill: #ff8023; }
+
+/**SUPPORT*/
+#support {
+  display: none;
+  width: 760px;
+  height: auto;
+  padding: 10px;
+  background-color: #f8f8f8; }
+  #support .message-container {
+    border: 1px solid #d3e7fb;
+    width: 100%;
+    height: 100%; }
+    #support .message-container-border {
+      border: 3px solid #aed7ff;
+      width: 100%;
+      height: 100%; }
+    #support .message-container h4 {
+      font-size: 18px;
+      font-weight: 900;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center; }
+    #support .message-container .msg-content {
+      padding: 0 30px 15px; }
+      #support .message-container .msg-content hr {
+        width: 90%;
+        border-top: #d3e7fb;
+        margin: 0 auto; }
+      #support .message-container .msg-content .support-row {
+        padding-top: 15px;
+        padding-bottom: 15px; }
+      #support .message-container .msg-content .support-addresses:after {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        border-right: 1px dotted #d3e7fb; }
+      #support .message-container .msg-content .contact-line {
+        margin-bottom: 30px; }
+        #support .message-container .msg-content .contact-line:last-child {
+          margin-bottom: 0; }
+        #support .message-container .msg-content .contact-line p {
+          margin: 0 0 10px 0; }
+        #support .message-container .msg-content .contact-line p:nth-of-type(1) {
+          font-size: 13px;
+          font-weight: 700; }
+        #support .message-container .msg-content .contact-line p:nth-of-type(2) {
+          font-size: 18px;
+          font-weight: 900; }
+        #support .message-container .msg-content .contact-line p:nth-of-type(3) {
+          font-size: 12px;
+          font-weight: 400; }
+          #support .message-container .msg-content .contact-line p:nth-of-type(3) span:first-child {
+            margin-right: 10px; }
+      #support .message-container .msg-content .form-support input {
+        width: 100%;
+        /* Firefox 19+ */
+        /* Firefox 18- */
+        font-weight: 400;
+        font-style: italic;
+        font-size: 13px; }
+        #support .message-container .msg-content .form-support input::-webkit-input-placeholder {
+          color: #282828; }
+        #support .message-container .msg-content .form-support input::-moz-placeholder {
+          color: #282828; }
+        #support .message-container .msg-content .form-support input:-moz-placeholder {
+          color: #282828; }
+        #support .message-container .msg-content .form-support input:-ms-input-placeholder {
+          color: #282828; }
+      #support .message-container .msg-content .form-support textarea {
+        width: 100%;
+        height: 150px;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 13px;
+        /* Firefox 19+ */
+        /* Firefox 18- */ }
+        #support .message-container .msg-content .form-support textarea::-webkit-input-placeholder {
+          color: #282828; }
+        #support .message-container .msg-content .form-support textarea::-moz-placeholder {
+          color: #282828; }
+        #support .message-container .msg-content .form-support textarea:-moz-placeholder {
+          color: #282828; }
+        #support .message-container .msg-content .form-support textarea:-ms-input-placeholder {
+          color: #282828; }
+      #support .message-container .msg-content .form-support .input {
+        margin-top: 0;
+        margin-bottom: 5px; }
+      #support .message-container .msg-content .form-support .submit-p {
+        margin-top: 5px;
+        margin-bottom: 0; }
 
 /**PERFORMER TOP SECTION BLUE*/
 section.performer {
@@ -625,7 +950,7 @@ section.performer {
       content: '';
       display: block;
       width: 1px;
-      height: 246px;
+      height: 266px;
       position: absolute;
       border-left: 1px dotted #5e5e5e;
       top: 30px;
@@ -761,6 +1086,17 @@ footer {
 
 /**MEDIA*/
 @media (max-width: 1200px) {
+  .wrapper header .info_title:before {
+    display: none; }
+  .wrapper header .login a.cabinet {
+    margin-top: 15px; }
+  .wrapper header .contacts a.tel {
+    margin-top: 15px; }
+  .wrapper section.search form .submit {
+    margin-top: 15px; }
+  .wrapper section.search form .input, .wrapper section.search form .select {
+    width: 50%; }
+
   .performer .performer-top-info .user-proofs {
     border: none;
     margin-top: 25px; }
@@ -797,6 +1133,13 @@ footer {
     text-align: left;
     margin-top: 20px; }
 
+  .performer.performer-tasks .table-wrapper {
+    overflow-x: scroll; }
+    .performer.performer-tasks .table-wrapper .tasks-table tr.table-content .btn-white {
+      font-size: 0; }
+      .performer.performer-tasks .table-wrapper .tasks-table tr.table-content .btn-white img {
+        margin: 0; }
+
   footer .footer-logo {
     display: block;
     text-align: center; }
@@ -822,6 +1165,8 @@ footer {
   footer .work-hours {
     text-align: center; } }
 @media (max-width: 768px) {
+  .wrapper header #nav-icon {
+    display: block; }
   .wrapper header .info {
     margin-top: 20px;
     padding: 0; }
@@ -847,6 +1192,19 @@ footer {
         border-radius: 0; }
     .wrapper section.search form .submit {
       margin-top: 15px; }
+  .wrapper .performer .row {
+    padding: 30px 0; }
+  .wrapper .performer.performer-tasks h3 {
+    margin-left: 0; }
+  .wrapper .performer.performer-tasks .tasks-filter {
+    padding-left: 0; }
+  .wrapper .performer.performer-tasks .table-wrapper {
+    overflow-x: scroll;
+    padding-left: 0; }
+    .wrapper .performer.performer-tasks .table-wrapper .tasks-table thead th:first-child {
+      padding-left: 15px; }
+    .wrapper .performer.performer-tasks .table-wrapper .tasks-table tr.table-content th:first-child {
+      padding-left: 15px; }
 
   #user_message {
     width: 300px; }
@@ -877,9 +1235,49 @@ footer {
       display: block;
       margin-bottom: 10px; }
 
+  #task-review {
+    width: 300px; }
+    #task-review .message-container .task-review-form p.input {
+      padding: 0 10px; }
+      #task-review .message-container .task-review-form p.input input, #task-review .message-container .task-review-form p.input textarea {
+        width: 100%; }
+      #task-review .message-container .task-review-form p.input label {
+        margin-bottom: 10px; }
+
+  #support {
+    width: 300px; }
+    #support .form-support {
+      margin-top: 20px; }
+      #support .form-support .submit-p {
+        text-align: center; }
+
   section.bread ul {
     width: 100%;
-    text-align: center; } }
+    text-align: center; }
+
+  footer .footer-nav {
+    position: fixed;
+    z-index: 99;
+    height: 100vh;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    width: 100%;
+    left: 100%;
+    -webkit-transition: ease 500ms;
+    -moz-transition: ease 500ms;
+    -ms-transition: ease 500ms;
+    -o-transition: ease 500ms;
+    transition: ease 500ms; }
+    footer .footer-nav__open {
+      left: 0; }
+    footer .footer-nav li {
+      flex: unset;
+      text-align: left;
+      padding: 15px; }
+      footer .footer-nav li a {
+        color: #fff;
+        font-size: 26px; } }
 @media (max-width: 640px) {
   .performer .performer-services .table-wrapper {
     overflow-x: scroll; }
